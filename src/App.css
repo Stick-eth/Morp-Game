@@ -68,3 +68,12 @@
   color: red;
   font-weight: bold;
 }
+
+label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}

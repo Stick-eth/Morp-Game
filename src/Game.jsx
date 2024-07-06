@@ -3,7 +3,7 @@ import './App.css';
 
 const initialBoard = Array(9).fill(null);
 
-function Game({ resetGame, isVsAI }) {
+function Game({ resetGame, isVsAI, helpMode }) {
   const [board, setBoard] = useState(initialBoard);
   const [isXNext, setIsXNext] = useState(true);
   const [xPositions, setXPositions] = useState([]);
@@ -49,7 +49,7 @@ function Game({ resetGame, isVsAI }) {
   const renderSquare = (index) => {
     const currentPlayerPositions = isXNext ? xPositions : oPositions;
     const nextMovePosition = currentPlayerPositions[0];
-    const showIndicator = currentPlayerPositions.length === 3 && nextMovePosition === index;
+    const showIndicator = helpMode && currentPlayerPositions.length === 3 && nextMovePosition === index;
 
     return (
       <button className="square" onClick={() => handleClick(index)}>
