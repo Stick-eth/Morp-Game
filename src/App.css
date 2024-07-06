@@ -15,6 +15,7 @@
 }
 
 .square {
+  position: relative; /* Permet la position absolue de l'indicateur */
   width: 100px;
   height: 100px;
   background-color: #fff;
@@ -57,4 +58,22 @@
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: normal;
+}
+
+.indicator {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 16px;
+  color: red;
+  font-weight: bold;
+}
+
+label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
 }

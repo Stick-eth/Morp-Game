@@ -6,6 +6,7 @@ import './App.css';
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [isVsAI, setIsVsAI] = useState(false);
+  const [helpMode, setHelpMode] = useState(false);
 
   const startGame = (vsAI) => {
     setIsVsAI(vsAI);
@@ -19,9 +20,9 @@ function App() {
   return (
     <div className="game">
       {gameStarted ? (
-        <Game resetGame={resetGame} isVsAI={isVsAI} />
+        <Game resetGame={resetGame} isVsAI={isVsAI} helpMode={helpMode} />
       ) : (
-        <Menu startGame={startGame} />
+        <Menu startGame={startGame} setHelpMode={setHelpMode} helpMode={helpMode} />
       )}
     </div>
   );
