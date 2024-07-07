@@ -27,7 +27,6 @@ function App() {
         <nav>
           <Link to="/">Menu</Link>
           <Link to="/profile">Profile</Link>
-          <Link to="/multiplayer">Multiplayer</Link>
         </nav>
         <Routes>
           <Route path="/" element={
