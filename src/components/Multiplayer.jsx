@@ -93,8 +93,8 @@ function Multiplayer() {
   };
 
   const handleClick = (index) => {
-    if (!board[index] && myTurn && !winner) {
-      socket.emit('makeMove', { roomId, index });
+    if (myTurn && !winner && board[index] === null) {
+      socket.emit('makeMove', { roomId, toIndex: index });
     }
   };
 
