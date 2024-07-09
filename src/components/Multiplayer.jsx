@@ -90,7 +90,6 @@ function Multiplayer() {
     setMyTurn(false);
     setErrorMessage('');
     setWinner(null);
-    socket.disconnect(); // Disconnect when leaving matchmaking or game
   };
 
   const handleClick = (index) => {
