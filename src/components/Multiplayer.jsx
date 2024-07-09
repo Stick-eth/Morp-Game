@@ -10,7 +10,6 @@ function Multiplayer() {
   const [matchFound, setMatchFound] = useState(false);
   const [opponent, setOpponent] = useState(null);
   const [board, setBoard] = useState(Array(9).fill(null));
-  const [currentPlayer, setCurrentPlayer] = useState(null);
   const [user, setUser] = useState(null);
   const [roomId, setRoomId] = useState(null);
   const [searching, setSearching] = useState(false);
@@ -33,13 +32,11 @@ function Multiplayer() {
         setMatchFound(true);
         setRoomId(roomId);
         setSearching(false);
-        setCurrentPlayer(currentPlayer);
         setMyTurn(currentPlayer === user.pseudo);
       });
 
       socket.on('moveMade', ({ board, currentPlayer }) => {
         setBoard(board);
-        setCurrentPlayer(currentPlayer);
         setMyTurn(currentPlayer === user.pseudo);
       });
 
@@ -85,7 +82,6 @@ function Multiplayer() {
     setMatchFound(false);
     setBoard(Array(9).fill(null));
     setOpponent(null);
-    setCurrentPlayer(null);
     setRoomId(null);
     setMyTurn(false);
     setErrorMessage('');
