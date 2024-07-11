@@ -115,7 +115,9 @@ function Multiplayer() {
           {errorMessage && <p className="error">{errorMessage}</p>}
           {winner && <p className="winner">Le gagnant est: {winner}</p>}
           <Board board={board} onClick={handleClick} />
-          <button onClick={leaveMatchmaking}>Quitter</button>
+          <div style={{ marginTop: '50px' }}>
+            <button onClick={leaveMatchmaking}>Quitter</button>
+          </div>
         </div>
       )}
     </div>
