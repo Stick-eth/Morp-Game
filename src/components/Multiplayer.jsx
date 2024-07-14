@@ -86,7 +86,11 @@ function Multiplayer() {
     setMyTurn(false);
     setErrorMessage('');
     setWinner(null);
-  };
+  
+    if (winner) {
+      socket.disconnect();
+    }
+  };  
 
   const handleClick = (index) => {
     if (myTurn && !winner && board[index] === null) {
