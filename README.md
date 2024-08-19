@@ -22,7 +22,7 @@ Ensure you have the following installed on your machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/morps.git
+   git clone https://github.com/stick-eth/morp-game.git
    cd morps
 
     ```
