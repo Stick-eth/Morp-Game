@@ -8,7 +8,7 @@ The game features:
 - **Two-player mode:** Play against another person.
 - **Player vs AI mode:** Play against a basic AI.
 - **Profile Management:** Login with email and password (currently simulated).
-- **Online Multiplayer:** (Coming soon)
+- **Online Multiplayer:** Matchmaking 1v1 (Elo system soon)
 
 ## Getting Started
 
